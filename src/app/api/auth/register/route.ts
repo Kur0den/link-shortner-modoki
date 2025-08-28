@@ -17,15 +17,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: '既にユーザーが存在します' }, { status: 403 });
     }
 
-    // パスワードのハッシュ化
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // // パスワードのハッシュ化
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     // ユーザーを作成
     const newUser = await prisma.users?.create({
       data: {
         id: id,
         name: id,
-        password: hashedPassword,
+        password: password,
       },
     });
 

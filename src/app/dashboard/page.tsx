@@ -185,9 +185,6 @@ export default function Dashboard() {
                 こんにちは、{session.user?.name}さん
               </span>
             </Nav.Item>
-            <Nav.Item className="me-3">
-              <ThemeToggle />
-            </Nav.Item>
             <Nav.Item>
               <Button
                 variant="outline-light"

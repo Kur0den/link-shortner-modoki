@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
-import RegisterForm from './RegisterForm';
+import RegisterForm from '../../../components/RegisterForm';
 
 export default async function RegisterPage() {
   // セッションをチェック
