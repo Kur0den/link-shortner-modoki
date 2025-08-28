@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ダークテーマカスタムスタイル */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529;
+  --bs-body-color: #dee2e6;
+}
+
+/* ダークテーマでのカードスタイル調整 */
+[data-bs-theme="dark"] .card {
+  --bs-card-bg: #2d3138;
+  --bs-card-border-color: #495057;
+}
+
+/* ダークテーマでのナビバースタイル調整 */
+[data-bs-theme="dark"] .navbar-text {
+  color: var(--bs-navbar-color) !important;
+}
+
+/* ダークテーマでのスピナー調整 */
+[data-bs-theme="dark"] .spinner-border {
+  color: #6c757d;
+}

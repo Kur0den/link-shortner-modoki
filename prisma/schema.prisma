@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model ShortLink {
+  id          String   @id @default(cuid())
+  shortCode   String   @unique
+  originalUrl String
+  title       String?
+  createdAt   DateTime @default(now())
+  clickCount  Int      @default(0)
+
+  @@map("short_links")
+}
+
+model Users {
+  id       String @id
+  name     String
+  password String
+  createdAt DateTime @default(now())
+}
