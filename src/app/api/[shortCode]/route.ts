@@ -3,10 +3,10 @@ import { prismaLinkService } from '../../../services/prismaLinkService';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { shortCode: string } }
+  context: { params:  Promise<{shortCode: string}> }
 ) {
   try {
-    const { shortCode } = params;
+    const { shortCode } = await context.params;
 
     // 短縮コードでリンクを検索
     const link = await prismaLinkService.getLinkByShortCode(shortCode);
