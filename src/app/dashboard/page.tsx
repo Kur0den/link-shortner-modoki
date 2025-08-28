@@ -259,7 +259,7 @@ export default function Dashboard() {
 
                     <Col md={6} className="mb-3">
                       <Form.Group>
-                        <Form.Label>タイトル（任意）</Form.Label>
+                        <Form.Label>名前 (任意)</Form.Label>
                         <Form.Control
                           type="text"
                           value={title}
